@@ -21,7 +21,7 @@ public class Class03BuscadorPlantillaFuncion {
                 //peticion al usuario para realizar consulta, ver consulta y almacenarla,
                 //Statement para interactuar con SQL y ResultSet para recoger el resultado de la consulta en 
                 //el bucle while que recorre las filas de la tabla
-                System.out.println("Escriba función a consultar: ");
+                System.out.println("Escriba función de PLANTILLA a consultar: ");
                 String f = teclado.nextLine();
                 teclado.close();
                 //SIEMPRE COMILLAS SIMPLES cuando realizamos consulta SQL
