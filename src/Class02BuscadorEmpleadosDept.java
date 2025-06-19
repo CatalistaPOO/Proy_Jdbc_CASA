@@ -10,6 +10,7 @@ public class Class02BuscadorEmpleadosDept {
         Scanner teclado = new Scanner(System.in); 
         System.out.println("Introduzca numero de departamento");
         String idDepartamento = teclado.nextLine();
+        teclado.close();
         
         //Usando las clases de SQL usaremos try/catch
         try {
