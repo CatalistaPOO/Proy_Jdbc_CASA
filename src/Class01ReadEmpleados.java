@@ -7,10 +7,10 @@ import java.sql.Statement;
 public class Class01ReadEmpleados {
     public static void main(String[] args) {
 
-        //1· registramos la clase del Driver JDBC de MySQL
-
         try {
+            //1· registramos la clase del Driver JDBC de MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
+
             //2· dependiendo de la base de datos necesitamos una cadena de conexion
             String connectionString = "jdbc:mysql://localhost:3366/hospital";//jdbc que usamos,servidor,ip,nombrebasedatos
 
@@ -21,13 +21,13 @@ public class Class01ReadEmpleados {
             String sql = "Select * from EMP";
 
             //5· Creamos el tipo de statement dependiendo de la consulta (ej:tiene parametros?)
-            Statement st = cn.createStatement();//Ojo!! Statement de sql, no de java
+            Statement st = cn.createStatement();//Ojo!! Statement de sql, no de java: este objeto hace la interaccion con el SQL
 
-            //6· Como es consulta select necesitamos un resultset y el metodo execute query
+            //6· Como es consulta select necesitamos un resultSet() y el metodo executeQuery()
             ResultSet rs = st.executeQuery(sql);
 
             //7· Recorremos los registros mediante un bucle while 
-            //  apellidos: Mientras haya filas (rs.next salta a la siguiente fila), en el atributo apellido, muestralo en consola
+            //  apellidos: Mientras haya una fila más (rs.next salta a la siguiente fila), en el atributo apellido, muestralo en consola
             // equivale a hacer en MySQL: select * from apellidos
             while(rs.next()){
                 String apellido = rs.getString("APELLIDO");

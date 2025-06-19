@@ -15,7 +15,7 @@ public class Class02BuscadorEmpleadosDept {
         try {
             //Pasos para conectar a la BBDD
             Class.forName("com.mysql.cj.jdbc.Driver");//buscamos driver (abrir workbench) usando el driver con la clase Class del jbdc
-            String connectionString = "jdbc:mysql://localhost:3366/hospital";//conectamos a la BBDD(tipo jdbc, lugar, nombre BBDD) almacenado en variable.
+            String connectionString = "jdbc:mysql://localhost:3366/hospital";//conectamos a la BBDD(tipo jdbc, lugar y puerto, nombre BBDD) almacenado en variable.
             Connection cn = DriverManager.getConnection(connectionString, "root", "root");//crea el objeto conexión (con usuario y password)
 
             //Una vez conectados a la BBDD, relalizamos las consultas
